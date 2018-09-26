@@ -1,0 +1,255 @@
+@charset "utf-8";
+html, body {
+  height: 100%;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  /*background-color: #e9e8e733;*/
+  line-height: 1.75;
+}
+
+.selector::-webkit-scrollbar { display: none }
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.section-blog-fw .excerpt {
+  text-align: initial;
+}
+
+.excerpt p,h1,h2,h3,h4,h5 {
+  padding-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: 2;
+    margin-bottom: 40px;
+    width: 100%;
+}
+tbody {
+    border-bottom: 1px solid #ddd;
+}
+td {
+    border: 1px solid rgba(0,0,0,.1);
+    border-width: 1px 1px 1px 1px;
+    padding: 8px;
+}
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #dadada;
+    border: 1px solid #c3c3c3;
+}
+th, td {
+    border: 1px solid rgba(0,0,0,.1);
+    border-width: 1px 1px 1px 1px;
+    padding: 8px;
+}
+blockquote {
+  font-size: 16px;
+  clear: both;
+  border-left: 4px solid #6db33f;
+  background-color: #EBF1E7;
+  color: #6C1818;
+  margin: 20px 0px!important;
+  padding: 10px!important;
+}
+
+.excerpt blockquote p {
+  font-size: .9rem;
+  padding-left: .2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section-blog-fw h2 a {
+    color: #257ff5;
+}
+
+.section img {
+    padding-bottom: 10px;
+}
+
+/* Navigation*/
+
+.navbar {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.nav-item {
+  padding: 0 5px;
+  font-family: PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+.subslogan {
+  font-family: PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+.section-heading {
+  color: #545763;
+}
+
+.top-nav-collapse {
+  background-color: #1f202a;
+}
+
+.topic-item .topic-title {
+  color: #595a57!important;
+  font-family: Lato Merriweather, Open Sans, Helvetica;
+}
+
+.post-title h4 {
+  color: #595a57!important;
+}
+
+.post-meta {
+  color: #878787 !important;
+}
+
+.topic-item .topic-meta {
+  color: #878787!important;
+}
+
+.text-xs-center {
+  text-align: center!important;
+}
+
+.btn {
+  padding: .75rem 2.13rem;
+  font-weight: 300;
+}
+
+.btn-floating {
+  background-color: #45526E;
+}
+
+.topic-item .readmore {
+  /*font-size: 16px;*/
+}
+
+.excerpt, .recent_post {
+  font-weight: 400;
+  /*font-family: Merriweather, Open Sans, Helvetica;*/
+}
+
+.excerpt h2, h3, h4, h5 {
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+footer.page-footer {
+  background-color: #1f202a;
+}
+
+footer.page-footer li {
+  padding-top: 15px;
+}
+
+footer.page-footer .title {
+  font-size: 16px;
+  color: #e3e4ec;
+}
+
+footer.page-footer a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9599af!important;
+}
+
+footer .about-meta p {
+  color: #abaebc!important;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1f202a;
+  }
+}
+
+.scrolling-navbar {
+  -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+  transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+/* Carousel*/
+
+.carousel-100 {
+  height: 100%;
+}
+
+.carousel-65 {
+  height: 65%;
+}
+
+@media (max-width: 776px) {
+  .carousel {
+    height: 100%;
+  }
+}
+
+.carousel-item, .active {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+/*Caption*/
+
+.flex-center {
+  color: #fff;
+}
+
+.navbar .btn-group .dropdown-menu a:hover {
+  color: #000 !important;
+}
+
+.navbar .btn-group .dropdown-menu a:active {
+  color: #fff !important;
+}
+.card .topic-title{
+   
+}
+.card .card-circle ul, .card-overlay ul, .flex-center ul, .section.team-section .avatar ul, .testimonial-carousel .testimonial .avatar ul{
+    list-style-type: none;
+    padding: 0;
+    text-align: center
+}
+.card .card-body .topic-title h4{
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+.card .card-body {
+    margin-top: -95px;
+}
+.card .card-body .post-title{
+    margin-bottom: 2.5rem!important;
+}
+.card .tag-title{
+    width: 100%;
+    height: 100px;
+    background-color: #257ff5;
+}
