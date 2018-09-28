@@ -11,210 +11,910 @@
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.5.10.min.css?ver=4.5.10">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/nave.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="ç/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="assets//css/matery.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/my.css">
+    <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+    <script src="assets/libs/jquery/jquery-2.2.0.min.js"></script>
+    <style>
+   svg {
+    color: #fff;
+    fill: var(--theme-color,#4CD964);
+    height: 80px;
+    width: 80px;
+  }
+  .nav-transparent .github-corner{
+      opacity: 0 !important;
+  }
+  .github-corner{
+    position: absolute;
+    z-index: 10000000;
+    top: -12px;
+    right: -8px;
+    transform: scale(.8);
+  }
+  .github-corner:hover .octo-arm {
+    animation: a 0.56s ease-in-out;
+  }
+  .github-corner .octo-arm {
+    animation: none;
+  }
+  @keyframes a {
+    0%,
+    to {
+      transform: rotate(0);
+    }
+    20%,
+    60% {
+      transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+      transform: rotate(10deg);
+    }
+  }
+  </style>
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar top-nav-collapse ">
-        <div class="container"> <a class="navbar-brand waves-effect waves-light" href="#"> <img
-                    src="assets/img/logo1.png" alt="logo" width="120" height="25"> </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item "> <a class="nav-link waves-effect waves-light" href="#/">码酱首页
-                        </a></li>
-                    <li class="nav-item "> <a class="nav-link waves-effect waves-light" href="#">博客分类
-                        </a></li>
-                    <li class="nav-item "> <a class="nav-link waves-effect waves-light" href="#">博客归档
-                        </a></li>
-                    <li class="nav-item "> <a class="nav-link waves-effect waves-light" href="#">关于我
-                        </a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div id="top-section" class="carousel-100 slide carousel-fade white-text" data-ride="carousel">
-        <ol class="carousel-indicators"></ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active view hm-black-light" style="background-image: url('https://o7axu8p8g.qnssl.com/img/cover/5.jpg?v=0.0.14');background-repeat: no-repeat;background-size: cover;">
-                <div class="full-bg-img flex-center white-text">
-                    <ul class="smooth-scroll animated fadeIn col-md-12">
-                        <li>
-                            <h1 class="h1-responsive wow fadeIn" style="animation-name: none; visibility: visible;">努力做最有价值的技术文章</h1>
+    <header class="navbar-fixed">
+        <nav id="headNav" class="bg-color nav-transparent">
+            <div id="navContainer" class="container">
+                <div class="nav-wrapper">
+                    <div class="brand-logo">
+                        <a href="/" class="waves-effect waves-light">
+                            <img src="assets/img/logo.png" class="logo-img hide-on-small-only">
+                            <span class="logo-span">码酱博客</span>
+                        </a>
+                    </div>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+                    <ul class="right">
+                        <li class="hide-on-med-and-down">
+                            <a href="/" class="waves-effect waves-light">码酱首页</a>
+                        </li>
+                        <li class="hide-on-med-and-down">
+                            <a href="/tags" class="waves-effect waves-light">文章标签</a>
+                        </li>
+                        <li class="hide-on-med-and-down">
+                            <a href="/archives" class="waves-effect waves-light">文章归档</a>
+                        </li>
+                        <li class="hide-on-med-and-down">
+                            <a href="/archives" class="waves-effect waves-light">关于我</a>
                         </li>
                         <li>
-                            <p class="subslogan wow fadeIn" data-wow-delay="0.4s" style="animation-name: none; visibility: visible;">这里，不求盈利，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；</p>
+                            <a id="toggleSearch" class="waves-effect waves-light">
+                                <i id="searchIcon" class="mdi-action-search"></i>
+                            </a>
                         </li>
-                        <li> <a href="#recent" class="btn-floating special-color-dark btn-lg wow fadeIn waves-effect waves-light"
-                                data-wow-delay="0.4s" data-offset="100" style="animation-name: none; visibility: visible;">
-                                <i class="fa fa-angle-down" aria-hidden="true"></i> </a></li>
                     </ul>
+                   
+                    <div class="side-nav" id="mobile-nav">
+                        <div class="mobile-head bg-color">
+                            <img src="assets/medias/logo.png" class="logo-img circle responsive-img">
+                            <div class="logo-name">努力做最有价值的技术文章</div>
+                            <div class="logo-desc">
+                                这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；
+                            </div>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="/" class="waves-effect waves-light">
+                                    <i class="fa fa-link fa-lg fa-fw"></i>码酱首页
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/tags" class="waves-effect waves-light">
+                                    <i class="fa fa-link fa-lg fa-fw"></i>标文章签
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/archives" class="waves-effect waves-light">
+                                    <i class="fa fa-link fa-lg fa-fw"></i>文章归档
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/archives" class="waves-effect waves-light">
+                                    <i class="fa fa-link fa-lg fa-fw"></i>关于我
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="social-link">
+                            <a href="https://github.com/luokangyuan" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+                                data-position="top" data-delay="50">
+                                <i class="fa fa-github fa-lg"></i>
+                            </a>
+                            <a href="mailto:lky9503@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我"
+                                data-position="top" data-delay="50">
+                                <i class="fa fa-envelope fa-lg"></i>
+                            </a>
+                            <a href="#!" class="tooltipped" data-tooltip="QQ号：243518985" data-position="top" data-delay="50">
+                                <i class="fa fa-qq fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+             <a href="javascript:;" class="github-corner">
+                        <svg viewBox="0 0 250 250" aria-hidden="true">
+                            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+                            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+                            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                                fill="currentColor" class="octo-body"></path>
+                        </svg>
+                    </a>
+        </nav>
+    </header>
+
+    <div class="bg-cover" style="background-image: url('/medias/cover.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+                    <div class="brand">
+                        <div class="title center-align">
+                            努力做最有价值的技术文章
+                        </div>
+                        <div class="description center-align">
+                            这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
-    <main class="">
-        <div class="container">
-            <section class="text-center my-5">
-                <h2 class="h1-responsive font-weight-bold my-5">经得起时间考验的技术文章</h2>
-                <div class="row">
-                    <div class="col-lg-4 col-md-12 mb-lg-0 mb-4 " >
-                        <div class="view overlay rounded z-depth-2 mb-4">
-                            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/81.jpg" alt="Sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <a href="#!" class="pink-text">
-                            <h6 class="font-weight-bold mb-3"><i class="fa fa-map pr-2"></i>Adventure</h6>
-                        </a>
-                        <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
-                        <p>by <a class="font-weight-bold">Billy Forester</a>, 15/07/2018</p>
-                        <p class="dark-grey-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                            impedit quo minus id quod maxime placeat facere possimus voluptas.</p>
-                        <a class="btn btn-pink btn-rounded btn-md">Read more</a>
 
-                    </div>
-                     <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
-                        <div class="view overlay rounded z-depth-2 mb-4">
-                            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/81.jpg" alt="Sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <a href="#!" class="pink-text">
-                            <h6 class="font-weight-bold mb-3"><i class="fa fa-map pr-2"></i>Adventure</h6>
-                        </a>
-                        <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
-                        <p>by <a class="font-weight-bold">Billy Forester</a>, 15/07/2018</p>
-                        <p class="dark-grey-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                            impedit quo minus id quod maxime placeat facere possimus voluptas.</p>
-                        <a class="btn btn-pink btn-rounded btn-md">Read more</a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-
-                        <!-- Featured image -->
-                        <div class="view overlay rounded z-depth-2 mb-4">
-                            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!-- Category -->
-                        <a href="#!" class="deep-orange-text">
-                            <h6 class="font-weight-bold mb-3"><i class="fa fa-graduation-cap pr-2"></i>Education</h6>
-                        </a>
-                        <!-- Post title -->
-                        <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
-                        <!-- Post data -->
-                        <p>by <a class="font-weight-bold">Billy Forester</a>, 13/07/2018</p>
-                        <!-- Excerpt -->
-                        <p class="dark-grey-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis voluptatum deleniti atque corrupti quos dolores.</p>
-                        <!-- Read more button -->
-                        <a class="btn btn-deep-orange btn-rounded btn-md">Read more</a>
-
-                    </div>
-                  
-                    <div class="col-lg-4 col-md-6 mb-0">
-
-                        <!-- Featured image -->
-                        <div class="view overlay rounded z-depth-2 mb-4">
-                            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/13.jpg" alt="Sample image">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                        <!-- Category -->
-                        <a href="#!" class="blue-text">
-                            <h6 class="font-weight-bold mb-3"><i class="fa fa-fire pr-2"></i>Culture</h6>
-                        </a>
-                        <!-- Post title -->
-                        <h4 class="font-weight-bold mb-3"><strong>Title of the news</strong></h4>
-                        <!-- Post data -->
-                        <p>by <a class="font-weight-bold">Billy Forester</a>, 11/07/2018</p>
-                        <!-- Excerpt -->
-                        <p class="dark-grey-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                            fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
-                        <!-- Read more button -->
-                        <a class="btn btn-info btn-rounded btn-md">Read more</a>
-
-                    </div>
-                   
-
-                </div>
-                
-
-            </section>
-        </div>
-    </main>
-
-    {{!-- <footer class="page-footer center-on-small-only">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-1 col-md-6 ml-auto"></div>
-                <div class="col-lg-3 col-md-6 ml-auto about-meta">
-                    <h5 class="title font-bold mt-3 mb-4">关于本站</h5>
-                    <hr class="stylish-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>开发者秘籍每周更新最系统的开发指南，帮助更多人巩固知识，让学习不再碎片化。</p>
-                    <p class="pt-4">站长邮箱: <img src="https://o7axu8p8g.qnssl.com/img/email.png" width="160" style="padding-top: -5px;"></p>
-                    <p class=""></p>
-                    <h3>进击吧皮卡丘 <svg width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" style="fill:#E21F1F;"
-                            class="NavLink-icon NavLink-icon--minor Footer-icon--heart" data-reactid="331">
-                            <title data-reactid="332">heart</title>
-                            <path d="M4.39 12.393S-1.315 9.331.282 6.717c1.597-2.614 4.108 0 4.108 0s2.28-2.23 4.004 0c1.724 2.231-4.004 5.676-4.004 5.676zm8.962-6.21S9.862 4.31 10.84 2.711c.977-1.6 2.513 0 2.513 0s1.395-1.365 2.45 0c1.055 1.365-2.45 3.472-2.45 3.472z"
-                                data-reactid="333"></path>
-                        </svg></h3>
-                </div>
-                <hr class="w-100 clearfix d-sm-none">
-                <div class="col-lg-2 col-md-6 col-6 ml-auto">
-                    <h5 class="title font-bold mt-3">最新文章</h5>
-                    <hr class="stylish-color accent-2 mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <ul>
-                        <li><a href="/one-key-script/caddy-filemanager.html">一键搭建最简单的私人网盘 File...</a></li>
-                        <li><a href="/one-key-script/linx-spam-email.html">Linux封垃圾邮件(SPAM)/...</a></li>
-                        <li><a href="/topics/one-key-script.html">一键脚本指南大全</a></li>
-                        <li><a href="/python-full-stack/built-in-functions.html">Python 基础之Python3...</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6 col-6 ml-auto">
-                    <h5 class="title font-bold mt-3">开发者工具</h5>
-                    <hr class="stylish-color mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <ul>
-                        <li><a target="_blank" href="http://tool.lu/encdec/">字符串编解码</a></li>
-                        <li><a target="_blank" href="http://tool.lu/css/">CSS在线压缩</a></li>
-                        <li><a target="_blank" href="http://www.json.cn/">在线JSON格式化</a></li>
-                        <li><a target="_blank" href="http://cron.qqe2.com/">Cron表达式生成器</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 ml-auto">
-                    <h5 class="title font-bold mt-3">友情链接</h5>
-                    <hr class="stylish-color mb-2 d-inline-block mx-auto" style="width: 60px;">
-                    <ul>
-                        <li><a target="_blank" href="https://github.com/biezhi">王爵的代码基地</a></li>
-                        <li><a target="_blank" href="https://lets-blade.com">Blade MVC</a></li>
-                        <li><a href="#!">虚位待定</a></li>
-                        <li><a href="#!">虚位待定</a></li>
-                    </ul>
+    <script>
+        // Dynamically switch banner pictures every day.
+        $('.bg-cover').css('background-image', 'url(assets/medias/banner/' + new Date().getDay() + '.jpg)');
+    </script>
+    <main class="content">
+        <div class="container notice">
+            <div class="card">
+                <div class="card-content">
+                    <i class="fa fa-volume-up fa-lg fa-fw text-color"></i>此生之路，我将走过；走过这一次，便再也无法重来。所有力所能及的善行，所有充盈于心的善意，我将毫不吝惜，即刻倾于。我将不再拖延，再不淡漠，只因此生之路，再也无法重来。
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            <div class="container-fluid col-lg-12"> © 2017 Copyright <a href=""> 开发者秘籍_开发者提升 </a> &nbsp; <a href="">dev-cheats.com</a>
-                All Rights Reserved. <span id="busuanzi_container_site_pv" style="display: inline;"> 本站总访问量<span id="busuanzi_value_site_pv">41808</span>次
-                </span></div>
+        <!-- 所有文章卡片 -->
+        <article id="articles" class="container articles">
+            <div class="row article-row">
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="/2018/09/14/2018/09/java-mian-xiang-dui-xiang-she-ji-zhi-gong-han-fang-fa-mo-shi/">
+                            <div class="card-image">
+
+                                <img src="http://static.blinkfox.com/hexoblog_20180914_factory.jpg" class="responsive-img"
+                                    alt="Java面向对象设计之工厂方法模式">
+
+                                <span class="card-title">Java面向对象设计之工厂方法模式</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">一、模式定义工厂方法模式(Factory Method Pattern)又称为工厂模式，也叫虚拟构造器(Virtual </div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>2018-09-14
+                                    </span>
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+
+                                        罗康元
+
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="card-action article-tags">
+
+                                <a href="https://blinkfox.github.io/tags/Java/" target="_blank">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+
+                                <a href="https://blinkfox.github.io/tags/设计模式/" target="_blank">
+                                    <span class="chip bg-color">设计模式</span>
+                                </a>
+
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="page-footer bg-color">
+        <div class="container row center-align">
+            <div class="col s12 m8 l8 copy-right">
+                本站由&copy;<a href="#" target="_blank">码酱</a>基于
+                <a href="#" target="_blank">ghost博客主题</a> 采用
+                <a href="#" target="_blank">ghost-mdb-theme</a>主题搭建.
+            </div>
+            <div class="col s12 m4 l4 social-link">
+                <a href="https://github.com/luokangyuan" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+                    data-position="top" data-delay="50">
+                    <i class="fa fa-github fa-lg"></i>
+                </a>
+                <a href="mailto:lky9503@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+                    data-delay="50">
+                    <i class="fa fa-envelope fa-lg"></i>
+                </a>
+                <a href="#!" class="tooltipped" data-tooltip="QQ: 243518985" data-position="top" data-delay="50">
+                    <i class="fa fa-qq fa-lg"></i>
+                </a>
+            </div>
         </div>
-    </footer> --}}
+    </footer>
+
+    <div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <div class="search-header">
+                <span class="title">搜索</span>
+                <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" autofocus="">
+            </div>
+            <div id="searchResult"></div>
+        </div>
+    </div>
+
+    <script src="/js/search.js"></script>
+    <script type="text/javascript">
+        searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    </script>
+    <!-- 回到顶部按钮 -->
+    <div id="backTop" class="top-scroll">
+        <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+    </div>
+
+
+    <script src="assets/libs/materialize/js/materialize.min.js"></script>
+    <script src="assets/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="assets/libs/aos/aos.js"></script>
+    <script src="assets/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="assets/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="assets/js/matery.js"></script>
 </body>
 
 </html>
