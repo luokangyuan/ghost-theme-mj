@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/articClassification.css"}}">
     <script src="{{asset "libs/jquery/jquery-2.2.0.min.js"}} "></script>
     <script src="{{asset "js/mj.js"}} "></script>
- 
+
 
 </head>
 
@@ -43,13 +43,13 @@
                             <a href="/" class="waves-effect waves-light">码酱首页</a>
                         </li>
                         <li class="hide-on-med-and-down">
-                            <a href="/articles/classification" class="waves-effect waves-light">文章分类</a>
+                            <a href="/articles/classification/" class="waves-effect waves-light">文章分类</a>
                         </li>
                         <li class="hide-on-med-and-down">
-                            <a href="/archives" class="waves-effect waves-light">文章归档</a>
+                            <a href="/articles/file/" class="waves-effect waves-light">文章归档</a>
                         </li>
                         <li class="hide-on-med-and-down">
-                            <a href="/archives" class="waves-effect waves-light">关于我</a>
+                            <a href="/about/me/" class="waves-effect waves-light">关于我</a>
                         </li>
                         <li>
                             <a id="toggleSearch" class="waves-effect waves-light">
@@ -118,67 +118,66 @@
     </header>
     <br><br><br>
     <main class="content">
-    <div id="tags" class="container tag-tip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">文章标签</div>
-                <div class="tag-chips">
+        <div id="tags" class="container tag-tip-container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="tag-title center-align">文章标签</div>
+                    <div class="tag-chips">
 
-                    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
-                    {{#foreach tags}}
-                    {{#if count.posts}}
-                    <a href="/articles/classification/{{slug}}">
-                        <span class="chip center-align waves-effect waves-light
+                        {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
+                        {{#foreach tags}}
+                        {{#if count.posts}}
+                        <a href="/articles/classification/{{slug}}">
+                            <span class="chip center-align waves-effect waves-light
                              chip-default classificationColor"
-                            style="background-color: #F9EBEA;">{{name}}
-                            <span class="tag-length">({{count.posts}})</span>
-                        </span>
-                    </a>
-                    {{/if}}
-                    {{/foreach}}
-                    {{/get}}
+                                style="background-color: #F9EBEA;">{{name}}
+                                <span class="tag-length">({{count.posts}})</span>
+                            </span>
+                        </a>
+                        {{/if}}
+                        {{/foreach}}
+                        {{/get}}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <article>
-            <div class="row tags-posts">
-                {{#foreach posts}}
-                <div class="article tag-post col s12 m6 l4" data-tags="PostgreSQL, 数据库">
-                    <div class="card">
-                        <a href="{{url}}">
-                            <div class="card-image tag-image">
-                                {{#if feature_image}}
-                                <img src="{{feature_image}}" class="responsive-img" alt="{{title}}">
-                                {{else}}
-                                <img src="http://image.luokangyuan.com/default.jpg" class="responsive-img" alt="{{title}}">
-                                {{/if}}
-                                <span class="card-title">{{title}}</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="fa fa-calendar fa-fw"></i>{{date}}
-                                </span>
-                                {{#author}}
-                                <span class="publish-author">
-                                    <i class="fa fa-user fa-fw"></i>
-                                    {{name}}
-                                </span>
-                                {{/author}}
+        <div class="container">
+            <article>
+                <div class="row tags-posts">
+                    {{#foreach posts}}
+                    <div class="article tag-post col s12 m6 l4" data-tags="PostgreSQL, 数据库">
+                        <div class="card">
+                            <a href="{{url}}">
+                                <div class="card-image tag-image">
+                                    {{#if feature_image}}
+                                    <img src="{{feature_image}}" class="responsive-img" alt="{{title}}">
+                                    {{else}}
+                                    <img src="http://image.luokangyuan.com/default.jpg" class="responsive-img" alt="{{title}}">
+                                    {{/if}}
+                                    <span class="card-title">{{title}}</span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>{{date}}
+                                    </span>
+                                    {{#author}}
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+                                        {{name}}
+                                    </span>
+                                    {{/author}}
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
+                    {{/foreach}}
                 </div>
-                {{/foreach}}
-            </div>
-        </article>
-    </div>
+            </article>
+        </div>
     </main>
-    </body>
+</body>
 
 </html>
- 
