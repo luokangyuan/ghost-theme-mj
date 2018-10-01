@@ -1,5 +1,69 @@
-<header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/awesome/css/font-awesome.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/materialize/css/materialize.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/aos/aos.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/animate/animate.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/lightGallery/css/lightgallery.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/matery.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/my.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/prism/prism.css"}}" >
+    <script src="{{asset "libs/jquery/jquery-2.2.0.min.js"}} "></script>
+    <style>
+        svg {
+    color: #fff;
+    fill: var(--theme-color,#4CD964);
+    height: 80px;
+    width: 80px;
+  }
+  .nav-transparent .github-corner{
+      opacity: 0 !important;
+  }
+  .github-corner{
+    position: absolute;
+    z-index: 10000000;
+    top: -12px;
+    right: -8px;
+    transform: scale(.8);
+  }
+  .github-corner:hover .octo-arm {
+    animation: a 0.56s ease-in-out;
+  }
+  .github-corner .octo-arm {
+    animation: none;
+  }
+  @keyframes a {
+    0%,
+    to {
+      transform: rotate(0);
+    }
+    20%,
+    60% {
+      transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+      transform: rotate(10deg);
+    }
+  }
+  </style>
+  
+</head>
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color">
         <div id="navContainer" class="container">
             <div class="nav-wrapper">
                 <div class="brand-logo">
@@ -14,13 +78,13 @@
                         <a href="/" class="waves-effect waves-light">码酱首页</a>
                     </li>
                     <li class="hide-on-med-and-down">
-                        <a href="/articles/classification/" class="waves-effect waves-light">文章分类</a>
+                        <a href="/tags" class="waves-effect waves-light">文章标签</a>
                     </li>
                     <li class="hide-on-med-and-down">
-                        <a href="/articles/file/" class="waves-effect waves-light">文章归档</a>
+                        <a href="/archives" class="waves-effect waves-light">文章归档</a>
                     </li>
                     <li class="hide-on-med-and-down">
-                        <a href="/about/me/" class="waves-effect waves-light">关于我</a>
+                        <a href="/archives" class="waves-effect waves-light">关于我</a>
                     </li>
                     <li>
                         <a id="toggleSearch" class="waves-effect waves-light">
@@ -44,17 +108,17 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/articles/classification/" class="waves-effect waves-light">
-                                <i class="fa fa-link fa-lg fa-fw"></i>文章分类
+                            <a href="/tags" class="waves-effect waves-light">
+                                <i class="fa fa-link fa-lg fa-fw"></i>标文章签
                             </a>
                         </li>
                         <li>
-                            <a href="/articles/file/" class="waves-effect waves-light">
+                            <a href="/archives" class="waves-effect waves-light">
                                 <i class="fa fa-link fa-lg fa-fw"></i>文章归档
                             </a>
                         </li>
                         <li>
-                            <a href="/about/me/" class="waves-effect waves-light">
+                            <a href="/archives" class="waves-effect waves-light">
                                 <i class="fa fa-link fa-lg fa-fw"></i>关于我
                             </a>
                         </li>
@@ -87,19 +151,13 @@
         </a>
     </nav>
 </header>
-<div class="bg-cover" style="background-image: url('/medias/cover.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-                <div class="brand">
-                    <div class="title center-align">
-                        努力做最有价值的技术文章
-                    </div>
-                    <div class="description center-align">
-                        这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <script src="{{asset "libs/materialize/js/materialize.min.js"}}"></script>
+    <script src="{{asset "libs/masonry/masonry.pkgd.min.js"}}"></script>
+    <script src="{{asset "libs/aos/aos.js"}}"></script>
+    <script src="{{asset "libs/scrollprogress/scrollProgress.min.js"}}"></script>
+    <script src="{{asset "libs/lightGallery/js/lightgallery-all.min.js"}}"></script>
+    <script src="{{asset "js/matery.js"}}"></script>
+    <script src="{{asset "libs/prism/prism.js"}}"></script>
+</body>
+
+</html>

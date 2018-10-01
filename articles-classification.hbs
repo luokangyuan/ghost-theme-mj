@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/articClassification.css"}}">
     <script src="{{asset "libs/jquery/jquery-2.2.0.min.js"}} "></script>
     <script src="{{asset "js/mj.js"}} "></script>
- 
+
 
 </head>
 
@@ -73,8 +73,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/articles/classification" class="waves-effect waves-light">
-                                    <i class="fa fa-link fa-lg fa-fw"></i>文章分类
+                                <a href="/tags" class="waves-effect waves-light">
+                                    <i class="fa fa-link fa-lg fa-fw"></i>标文章签
                                 </a>
                             </li>
                             <li>
@@ -118,67 +118,160 @@
     </header>
     <br><br><br>
     <main class="content">
-    <div id="tags" class="container tag-tip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">文章标签</div>
-                <div class="tag-chips">
-
-                    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
-                    {{#foreach tags}}
-                    {{#if count.posts}}
-                    <a href="/articles/classification/{{slug}}">
-                        <span class="chip center-align waves-effect waves-light
+        <div id="tags" class="container tag-tip-container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="tag-title center-align">文章标签</div>
+                    <div class="tag-chips">
+                        {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
+                        {{#foreach tags}}
+                        {{#if count.posts}}
+                        <a href="/articles/classification/{{slug}}">
+                            <span class="chip center-align waves-effect waves-light
                              chip-default classificationColor"
-                            style="background-color: #F9EBEA;">{{name}}
-                            <span class="tag-length">({{count.posts}})</span>
-                        </span>
-                    </a>
-                    {{/if}}
-                    {{/foreach}}
-                    {{/get}}
+                                style="background-color: #F9EBEA;">{{name}}
+                                <span class="tag-length">({{count.posts}})</span>
+                            </span>
+                        </a>
+                        {{/if}}
+                        {{/foreach}}
+                        {{/get}}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <article>
-            <div class="row tags-posts">
-                {{#foreach posts}}
-                <div class="article tag-post col s12 m6 l4" data-tags="PostgreSQL, 数据库">
-                    <div class="card">
-                        <a href="{{url}}">
-                            <div class="card-image tag-image">
-                                {{#if feature_image}}
-                                <img src="{{feature_image}}" class="responsive-img" alt="{{title}}">
-                                {{else}}
-                                <img src="http://image.luokangyuan.com/default.jpg" class="responsive-img" alt="{{title}}">
-                                {{/if}}
-                                <span class="card-title">{{title}}</span>
+
+        <div class="container">
+            <article>
+                <div class="row tags-posts">
+                    <div class="article tag-post col s12 m6 l6">
+                        <div class="card">
+                            <div class="skill-title center-align">知识技能图</div>
+                            <hr class="skill-hr">
+                            <div id="skill-echart" style="height:400px">
+
                             </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="fa fa-calendar fa-fw"></i>{{date}}
-                                </span>
-                                {{#author}}
-                                <span class="publish-author">
-                                    <i class="fa fa-user fa-fw"></i>
-                                    {{name}}
-                                </span>
-                                {{/author}}
+                        </div>
+                    </div>
+                    <div class="article tag-post col s12 m6 l6">
+                        <div class="card">
+                            <div class="skill-title center-align">个人能力图</div>
+                            <hr class="skill-hr">
+                            <div id="power-echart" style="height:400px">
+
                             </div>
                         </div>
                     </div>
 
                 </div>
-                {{/foreach}}
-            </div>
-        </article>
-    </div>
+            </article>
+        </div>
     </main>
-    </body>
+
+
+    {{!--
+    <script src="{{asset "libs/materialize/js/materialize.min.js"}}"></script>
+    <script src="{{asset "libs/masonry/masonry.pkgd.min.js"}}"></script>
+    <script src="{{asset "libs/aos/aos.js"}}"></script>
+    <script src="{{asset "libs/scrollprogress/scrollProgress.min.js"}}"></script>
+    <script src="{{asset "libs/lightGallery/js/lightgallery-all.min.js"}}"></script>
+    <script src="{{asset "js/matery.js"}}"></script>
+    <script src="{{asset "libs/prism/prism.js"}}"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0.rc2/echarts.min.js"></script>
+    <script type="text/javascript" type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var skillChart = echarts.init(document.getElementById('skill-echart'));
+        var powerChart = echarts.init(document.getElementById('power-echart'));
+
+        // 指定图表的配置项和数据
+        var skillOption = {
+            title: {
+                text: ''
+            },
+            tooltip: {},
+            legend: {
+                data: ['知识技能'],
+                show: false
+            },
+            radar: {
+                // shape: 'circle',
+                name: {
+                    textStyle: {
+                        color: '#fff',
+                        backgroundColor: '#999',
+                        borderRadius: 3,
+                        padding: [3, 5]
+                    }
+                },
+                indicator: [
+                    { name: 'Java', max: 6500 },
+                    { name: 'javaScrip', max: 16000 },
+                    { name: 'Mysql', max: 30000 },
+                    { name: 'Linux', max: 38000 },
+                    { name: 'Vue', max: 52000 },
+                    { name: 'Postgre', max: 25000 }
+                ]
+            },
+            series: [{
+                name: '知识技能',
+                type: 'radar',
+                // areaStyle: {normal: {}},
+                data: [
+                    {
+                        value: [4300, 10000, 28000, 35000, 50000, 19000],
+                        name: '知识技能'
+                    }
+                ]
+            }]
+        };
+        var powerOption = {
+            title: {
+                text: '',
+                subtext: '',
+                show: false
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['2017年', '2018年']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                boundaryGap: [0, 0.01]
+            },
+            yAxis: {
+                type: 'category',
+                data: ['项目经验', '设计模式', '大数据开发能力', '前端编码能力', '数据库设计能力', 'Java开发能力']
+            },
+            series: [
+                {
+                    name: '2017年',
+                    type: 'bar',
+                    data: [18203, 23489, 29034, 104970, 131744, 630230]
+                },
+                {
+                    name: '2018年',
+                    type: 'bar',
+                    data: [19325, 23438, 31000, 121594, 134141, 681807]
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        skillChart.setOption(skillOption);
+        powerChart.setOption(powerOption);
+    </script>
+
+</body>
 
 </html>
- 

@@ -1,1 +1,72 @@
 /* Here is your custom css styles. */
+/* Here is your custom css styles. */
+pre {
+    background-color: #263238 !important;
+}
+.chip{
+    color:rgba(255, 255, 255, 0.87) !important;
+}
+.chip-default .tag-length{
+    color:rgba(255, 255, 255, 0.87) !important;
+}
+/* github logo */
+svg {
+    color: #fff;
+    fill: var(--theme-color, #4CD964);
+    height: 80px;
+    width: 80px;
+}
+
+.nav-transparent .github-corner {
+    opacity: 0 !important;
+}
+
+.github-corner {
+    position: absolute;
+    z-index: 10000000;
+    top: -12px;
+    right: -8px;
+    transform: scale(.8);
+}
+
+.github-corner:hover .octo-arm {
+    animation: a 0.56s ease-in-out;
+}
+
+.github-corner .octo-arm {
+    animation: none;
+}
+
+@keyframes a {
+
+    0%,
+    to {
+        transform: rotate(0);
+    }
+
+    20%,
+    60% {
+        transform: rotate(-25deg);
+    }
+
+    40%,
+    80% {
+        transform: rotate(10deg);
+    }
+}
+/* 文章分类页面 */
+.card .skill-title{
+    margin-bottom: 10px;
+    color: #3C4858;
+    font-size: 1.75rem;
+    font-weight: 400;
+    padding: 20px;
+}
+hr.skill-hr{
+    margin:0 auto;
+    border: 0;
+    height: 3px;
+    background: #333;background-image: linear-gradient(to right, #DBDDDE, #898C90, #DBDDDE);
+    margin-top: -27px;
+}
+

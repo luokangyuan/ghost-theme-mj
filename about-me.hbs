@@ -19,10 +19,53 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/matery.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/my.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "libs/prism/prism.css"}}">
-    <link rel="stylesheet" type="text/css" href="{{asset "css/articClassification.css"}}">
     <script src="{{asset "libs/jquery/jquery-2.2.0.min.js"}} "></script>
-    <script src="{{asset "js/mj.js"}} "></script>
- 
+    <style>
+        svg {
+            color: #fff;
+            fill: var(--theme-color, #4CD964);
+            height: 80px;
+            width: 80px;
+        }
+
+        .nav-transparent .github-corner {
+            opacity: 0 !important;
+        }
+
+        .github-corner {
+            position: absolute;
+            z-index: 10000000;
+            top: -12px;
+            right: -8px;
+            transform: scale(.8);
+        }
+
+        .github-corner:hover .octo-arm {
+            animation: a 0.56s ease-in-out;
+        }
+
+        .github-corner .octo-arm {
+            animation: none;
+        }
+
+        @keyframes a {
+
+            0%,
+            to {
+                transform: rotate(0);
+            }
+
+            20%,
+            60% {
+                transform: rotate(-25deg);
+            }
+
+            40%,
+            80% {
+                transform: rotate(10deg);
+            }
+        }
+    </style>
 
 </head>
 
@@ -43,7 +86,7 @@
                             <a href="/" class="waves-effect waves-light">码酱首页</a>
                         </li>
                         <li class="hide-on-med-and-down">
-                            <a href="/articles/classification" class="waves-effect waves-light">文章分类</a>
+                            <a href="/tags" class="waves-effect waves-light">文章标签</a>
                         </li>
                         <li class="hide-on-med-and-down">
                             <a href="/archives" class="waves-effect waves-light">文章归档</a>
@@ -73,8 +116,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/articles/classification" class="waves-effect waves-light">
-                                    <i class="fa fa-link fa-lg fa-fw"></i>文章分类
+                                <a href="/tags" class="waves-effect waves-light">
+                                    <i class="fa fa-link fa-lg fa-fw"></i>标文章签
                                 </a>
                             </li>
                             <li>
@@ -116,69 +159,32 @@
             </a>
         </nav>
     </header>
-    <br><br><br>
-    <main class="content">
-    <div id="tags" class="container tag-tip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">文章标签</div>
-                <div class="tag-chips">
-
-                    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
-                    {{#foreach tags}}
-                    {{#if count.posts}}
-                    <a href="/articles/classification/{{slug}}">
-                        <span class="chip center-align waves-effect waves-light
-                             chip-default classificationColor"
-                            style="background-color: #F9EBEA;">{{name}}
-                            <span class="tag-length">({{count.posts}})</span>
-                        </span>
-                    </a>
-                    {{/if}}
-                    {{/foreach}}
-                    {{/get}}
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m2 ">
+                <p class="z-depth-1">z-depth-1</p>
+            </div>
+            <div class="col s12 m2">
+                <p class="z-depth-2">z-depth-2</p>
+            </div>
+            <div class="col s12 m2">
+                <p class="z-depth-3">z-depth-3</p>
+            </div>
+            <div class="col s12 m2">
+                <p class="z-depth-4">z-depth-4</p>
+            </div>
+            <div class="col s12 m2">
+                <p class="z-depth-5">z-depth-5</p>
             </div>
         </div>
     </div>
-    <div class="container">
-        <article>
-            <div class="row tags-posts">
-                {{#foreach posts}}
-                <div class="article tag-post col s12 m6 l4" data-tags="PostgreSQL, 数据库">
-                    <div class="card">
-                        <a href="{{url}}">
-                            <div class="card-image tag-image">
-                                {{#if feature_image}}
-                                <img src="{{feature_image}}" class="responsive-img" alt="{{title}}">
-                                {{else}}
-                                <img src="http://image.luokangyuan.com/default.jpg" class="responsive-img" alt="{{title}}">
-                                {{/if}}
-                                <span class="card-title">{{title}}</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="fa fa-calendar fa-fw"></i>{{date}}
-                                </span>
-                                {{#author}}
-                                <span class="publish-author">
-                                    <i class="fa fa-user fa-fw"></i>
-                                    {{name}}
-                                </span>
-                                {{/author}}
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                {{/foreach}}
-            </div>
-        </article>
-    </div>
-    </main>
-    </body>
+    <script src="{{asset "libs/materialize/js/materialize.min.js"}}"></script>
+    <script src="{{asset "libs/masonry/masonry.pkgd.min.js"}}"></script>
+    <script src="{{asset "libs/aos/aos.js"}}"></script>
+    <script src="{{asset "libs/scrollprogress/scrollProgress.min.js"}}"></script>
+    <script src="{{asset "libs/lightGallery/js/lightgallery-all.min.js"}}"></script>
+    <script src="{{asset "js/matery.js"}}"></script>
+    <script src="{{asset "libs/prism/prism.js"}}"></script>
+</body>
 
 </html>
- 

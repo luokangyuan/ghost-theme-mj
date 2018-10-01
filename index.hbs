@@ -1,36 +1,60 @@
-{{!< default}}
-{{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
+{{!< default}} 
 
-{{!-- The big featured header, it uses blog cover image as a BG if available --}}
-<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
-    <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                {{#if @blog.logo}}
-                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
-                {{else}}
-                    {{@blog.title}}
-                {{/if}}
-            </h1>
-            <h2 class="site-description">{{@blog.description}}</h2>
+    {{!-- The main content area --}}
+    <main class="content">
+        <div class="container notice">
+            <div class="card">
+                <div class="card-content">
+                    <i class="fa fa-volume-up fa-lg fa-fw text-color"></i>此生之路，我将走过；走过这一次，便再也无法重来。所有力所能及的善行，所有充盈于心的善意，我将毫不吝惜，即刻倾于。我将不再拖延，再不淡漠，只因此生之路，再也无法重来。
+                </div>
+            </div>
         </div>
-        {{> "site-nav"}}
-    </div>
-</header>
+        <!-- 所有文章卡片 -->
 
-{{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-    <div class="inner">
+        <article id="articles" class="container articles">
+            <div class="row article-row">
+                {{#foreach posts}}
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="{{url}}">
+                            <div class="card-image">
+                                {{#if feature_image}}
+                                <img src="{{feature_image}}" class="responsive-img" alt="{{title}}">
+                                {{else}}
+                                <img src="http://image.luokangyuan.com/default.jpg" class="responsive-img" alt="{{title}}">
+                                {{/if}}
+                                <span class="card-title">{{title}}</span>
+                            </div>
 
-        <div class="post-feed">
-            {{#foreach posts}}
+                            <div class="card-content article-content">
+                                <div class="summary">{{excerpt characters="60"}}</div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>{{date}}
+                                    </span>
+                                    {{#author}}
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+                                        {{name}}
+                                    </span>
+                                    {{/author}}
+                                </div>
+                            </div>
 
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
+                            {{#if tags}}
+                            <div class="card-action article-tags">
+                                {{#foreach tags}}
+                                <a href="{{url}}" target="_blank">
+                                    <span class="chip bg-color">{{name}}</span>
+                                </a>
+                                {{/foreach}}
+                            </div>
+                            {{/if}}
+                        </a>
+                    </div>
+                </div>
+                {{/foreach}}
+            </div>
+        </article>
 
-            {{/foreach}}
-        </div>
-
-    </div>
-</main>
+    </main>
