@@ -167,6 +167,31 @@
             </article>
         </div>
     </main>
+    <footer class="page-footer bg-color">
+        <div class="container row center-align">
+            <div class="col s12 m8 l8 copy-right">
+                本站由&copy;<a href="#" target="_blank">码酱</a>基于
+                <a href="#" target="_blank">ghost博客主题</a> 采用
+                <a href="#" target="_blank">ghost-mdb-theme</a>主题搭建,© 2018 蜀ICP备18020377号
+            </div>
+            <div class="col s12 m4 l4 social-link">
+                <a href="https://github.com/luokangyuan" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+                    data-position="top" data-delay="50">
+                    <i class="fa fa-github fa-lg"></i>
+                </a>
+                <a href="mailto:lky9503@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+                    data-delay="50">
+                    <i class="fa fa-envelope fa-lg"></i>
+                </a>
+                <a href="#!" class="tooltipped" data-tooltip="QQ: 243518985" data-position="top" data-delay="50">
+                    <i class="fa fa-qq fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="progress-bar"></div>
+
 
 
     {{!--
@@ -177,11 +202,27 @@
     <script src="{{asset "libs/lightGallery/js/lightgallery-all.min.js"}}"></script>
     <script src="{{asset "js/matery.js"}}"></script>
     <script src="{{asset "libs/prism/prism.js"}}"></script> --}}
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0.rc2/echarts.min.js"></script>
-    <script type="text/javascript" type="text/javascript">
+    <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var skillChart = echarts.init(document.getElementById('skill-echart'));
         var powerChart = echarts.init(document.getElementById('power-echart'));
+        //请求数据
+       var names = [];
+       var values  = [];
+       $(".classificationColor").text(function(index,text){
+           var item = {};
+           item.name = text.trim().split("(")[0].trim();
+           item.max = 10;
+           names.push(item);
+           values.push(parseInt(text.trim().split("(")[1].trim().split(")")[0]))
+       });
+       
+       console.log(names)
+       console.log(values)
+       
+       
 
         // 指定图表的配置项和数据
         var skillOption = {
@@ -203,14 +244,7 @@
                         padding: [3, 5]
                     }
                 },
-                indicator: [
-                    { name: 'Java', max: 6500 },
-                    { name: 'javaScrip', max: 16000 },
-                    { name: 'Mysql', max: 30000 },
-                    { name: 'Linux', max: 38000 },
-                    { name: 'Vue', max: 52000 },
-                    { name: 'Postgre', max: 25000 }
-                ]
+                indicator: names
             },
             series: [{
                 name: '知识技能',
@@ -218,7 +252,7 @@
                 // areaStyle: {normal: {}},
                 data: [
                     {
-                        value: [4300, 10000, 28000, 35000, 50000, 19000],
+                        value: values,
                         name: '知识技能'
                     }
                 ]
@@ -257,12 +291,12 @@
                 {
                     name: '2017年',
                     type: 'bar',
-                    data: [18203, 23489, 29034, 104970, 131744, 630230]
+                    data: [4, 5, 6, 2, 4, 4]
                 },
                 {
                     name: '2018年',
                     type: 'bar',
-                    data: [19325, 23438, 31000, 121594, 134141, 681807]
+                    data: [7, 7, 8, 5, 7, 9]
                 }
             ]
         };

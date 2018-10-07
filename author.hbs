@@ -1,7 +1,7 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-{{#author}}
+{{#foreach authors}}
 {{!-- Everything inside the #author tags pulls data from the author --}}
 <header class="site-header outer {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}">
     <div class="inner">
@@ -35,7 +35,7 @@
         </div>
     </div>
 </header>
-{{/author}}
+{{/foreach}}
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">

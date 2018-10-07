@@ -4,3 +4,4 @@ $(function(){
        $(item).css("background-color",color[index])
    })
 })
+
