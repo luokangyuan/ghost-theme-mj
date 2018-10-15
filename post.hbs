@@ -1,6 +1,4 @@
-{{!< default}}
-
-<main class="content">
+{{!< default}} <main class="content">
     {{#post}}
     <div id="artDetail" class="container">
         <div class="card">
@@ -21,13 +19,18 @@
             <hr>
             <div class="card-content article-card-content">
                 <div id="articleContent">
-                  {{content}}
+                    {{content}}
                 </div>
-                <hr/>
+                <hr />
+                <div class="row">
+                    <div class="col s12">
+                       {{> reward}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-{{/post}}
-</main>
+    {{/post}}
 
-
+    </main>
+    

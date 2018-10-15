@@ -28,8 +28,7 @@
 <body>
        {{> site-nav}}
     <script>
-        // Dynamically switch banner pictures every day.
-        $('.bg-cover').css('background-image', 'url(assets/medias/banner/' + new Date().getDay() + '.jpg)');
+       
     </script>
     {{{body}}}
     {{> floating-header}}
@@ -63,11 +62,7 @@
     <script src="{{asset "js/mj.js"}}"></script>
     {{ghost_foot}}
     <script>
-        $.get(ghost.url.api('tags')).done(function (data) {
-            console.log('tags', data.tags);
-        }).fail(function (err) {
-            console.log(err);
-        });
+       
     </script>
 </body>
 
