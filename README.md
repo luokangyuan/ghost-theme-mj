@@ -1,66 +1,12 @@
-# Casper
+# 感谢
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
+之前一直使用的是CSDN，简书，也自己搭建了一个个人博客，初到华宇公司，认识了闪烁之狐（笔名）大佬，入职后一个月知道了大佬的个人博客，深受喜爱，当天就买了阿里云服务器和域名，当天晚上熬夜搭建了属于自己的Ghost博客；随后，跟着大佬学知识，更加注重域理解每一个知识点，最近大佬换博客啦，使用Hexo搭建，如果你也使用的是Hexo,那么，我强烈建议你使用大佬的主题，[主题传送门](https://github.com/blinkfox/hexo-theme-matery),这个Ghost博客主题就是使用大佬的设计，特别是文章详情页面，如果你的Markdown写的足够好，简直和艺术品一样，另外推荐你使用大佬写的一个typora主题，[主题传送门](https://github.com/blinkfox/hexo-theme-matery),如果你使用的是Ghost博客，刚好，你看我这个主题顺眼，你可以使用这个。
 
-&nbsp;
+# 简介
 
-![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
+主题尚未更新完，自己有很多想法，慢慢一点一点的增加，简介以后再写吧；
 
-&nbsp;
+# 后续开发任务
 
-# First time using a Ghost theme?
-
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
-
-We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://themes.ghost.org) which explains every possible Handlebars helper and template.
-
-**The main files are:**
-
-- `default.hbs` - The main template file
-- `index.hbs` - Used for the home page
-- `post.hbs` - Used for individual posts
-- `page.hbs` - Used for individual pages
-- `tag.hbs` - Used for tag archives
-- `author.hbs` - Used for author archives
-
-One really neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
-
-- `page-about.hbs` - Custom template for the `/about/` page
-- `tag-news.hbs` - Custom template for `/tag/news/` archive
-- `author-ali.hbs` - Custom template for `/author/ali/` archive
-
-
-# Development
-
-Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need Node and Gulp installed globally. After that, from the theme's root directory:
-
-```bash
-$ yarn install
-$ yarn dev
-```
-
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
-
-The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
-
-```bash
-$ yarn zip
-```
-
-# PostCSS Features Used
-
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
-- Variables - Simple pure CSS variables
-- [Color Function](https://github.com/postcss/postcss-color-function)
-
-
-# SVG Icons
-
-Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
-
-You can add your own SVG icons in the same manner.
-
-
-# Copyright & License
-
-Copyright (c) 2013-2018 Ghost Foundation - Released under the [MIT license](LICENSE).
+[] 集成文章分享功能
+ 
