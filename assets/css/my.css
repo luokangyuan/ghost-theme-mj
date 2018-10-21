@@ -150,5 +150,190 @@ hr.skill-hr{
 .tag-bg-color{
     background-color: #007AFF;
 }
+/* 一下是大佬名片 */
+.contact-area {
+    width: 100%;
+   
+    position: relative;
+  }
+  .contact main {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  .contact main section {
+    border-radius: 5px;
+    float: left;
+    width: 100%;
+    background-color: #eb524a;
+  }
+  .contact main section .jianjie {
+    float: left;
+    width: 100%;
+    padding: 20px 30px 50px 30px;
+    position: relative;
+    text-align: center;
+  }
+  @media (min-width: 414px) {
+    .contact main section .jianjie {
+      text-align: left;
+    }
+  }
+  .contact main section .jianjie img {
+    display: inline-block;
+    width: 140px;
+    border-radius: 50%;
+  }
+  @media (min-width: 414px) {
+    .contact main section .jianjie img {
+      float: left;
+      width: 30%;
+      margin-right: 10%;
+    }
+  }
+  .contact main section .jianjie aside {
+    float: left;
+    width: 100%;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  @media (min-width: 414px) {
+    .contact main section .jianjie aside {
+      width: 60%;
+    }
+  }
+  .contact main section .jianjie aside h1 {
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+  .contact main section .jianjie aside p {
+    font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 160%;
+  }
+  .contact main .title {
+    float: left;
+    width: 100%;
+    background-color: #c63535;
+    max-height: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    -webkit-transition: all 0.55s;
+    -moz-transition: all 0.55s;
+    -o-transition: all 0.55s;
+    transition: all 0.55s;
+  }
+  .contact main .title.active {
+    max-height: 100px;
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -o-transition: all 1.3s;
+    transition: all 1.3s;
+  }
+  .contact main .title.active p {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    transition-delay: .2s;
+  }
+  .contact main .title p {
+    padding: 15px 30px;
+    color: #ffffff;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+  }
+  .contact main button {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    background-color: #ffbe44;
+    color: #c63535;
+    border: 0;
+    width: 200px;
+    height: 48px;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin-bottom: -24px;
+    margin-right: -100px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    transition-delay: .1s;
+    outline: none;
+    overflow: hidden;
+    z-index: 10;
+    font-family: inherit;
+  }
+  .contact main button span {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    transition-delay: .4s;
+    display: block;
+    width: 200px;
+    float: left;
+    padding: 15px 0px;
+  }
+  .contact main button svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .contact main button svg path {
+    fill: #c63535;
+  }
+  .contact main button.active {
+    margin-right: 0;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    margin-bottom: -32.5px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 65px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  .contact main button.active span {
+    opacity: 0;
+    transition-delay: 0s;
+    width: 200px;
+  }
+  .contact main button.active svg {
+    opacity: 1;
+    transition-delay: .5s;
+  }
 
 
