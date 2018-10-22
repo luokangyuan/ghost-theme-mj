@@ -151,7 +151,10 @@ hr.skill-hr{
     background-color: #007AFF;
 }
 /* 一下是大佬名片 */
-.contact-area {
+.frind-ship img{
+    border-radius: 50%;
+}
+/* .contact-area {
     width: 100%;
    
     position: relative;
@@ -334,6 +337,45 @@ hr.skill-hr{
   .contact main button.active svg {
     opacity: 1;
     transition-delay: .5s;
-  }
+  } */
+/* 一下是按钮样式 */
+.frind-ship{
+    padding: 10px 20px;
+}
+
+.frind-ship .title{
+    display: flex;
+    align-items: center;
+ 
+}
+.frind-ship .title div{
+    color: #fff;
+    padding-left: 10px;
+}
+.frind-ship .title img{
+    width: 100px;
+    height: 100px;
+}
+.frind-ship .title h1{
+    line-height: 0.8rem;
+}
+.friend-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -27px;   
+}
+.friend-button a {
+    border-radius: 40px;
+}
+
+.frind-card{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    border-radius: 40px;
+}
+.card .frind-ship{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    border-radius: 30px;
+}
+
 
 
