@@ -1,61 +1,161 @@
-{{!< default}}
-    <main class="content">
-        <div id="tags" class="container tag-tip-container">
-            <div class="card">
-                <div class="card-content">
-                    <div class="tag-title center-align">文章标签</div>
-                    <div class="tag-chips">
-                        {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
-                        {{#foreach tags}}
-                        {{#if count.posts}}
-                        <a href="/articles/classification/{{slug}}">
-                            <span class="chip center-align waves-effect waves-light
-                             chip-default classificationColor"
-                                style="background-color: #F9EBEA;">{{name}}
-                                <span class="tag-length">({{count.posts}})</span>
-                            </span>
-                        </a>
-                        {{/if}}
-                        {{/foreach}}
-                        {{/get}}
+{{!< default}} <main class="content">
+    <div id="tags" class="container tag-tip-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-left" style="font-size:1.2rem">
+                    个人简介：码酱，男，软件工程师，菜鸡一个，喜欢摄影，爱好羽毛球，爱看一些杂七杂八的书，对耳根，唐家三少的书特别喜欢!
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">我的曾经</div>
+                <div class="row">
+                    <div class="col s12 m4 l4 my-info">
+                        <div class="info1">
+                            <div class="logo-info">
+                                <div class="bk-img frind-card5">
+                                    <span>CSDN</span>
+                                </div>
+                            </div>
+                            <div class="bk-title">
+                                <span>大学开始养成记录的习惯，从最开始的Java基础到SSH框架，到后面不断的学习和总结，随着该平台设计越来越丑，广告越来越多，文章质量越来越差，果断离开</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col s12 m4 l4 my-info">
+                        <div class="info1">
+                            <div class="logo-info">
+                                <div class="bk-img frind-card6">
+                                    <span>简书</span>
+                                </div>
+                            </div>
+                            <div class="bk-title">
+                                <span>看了电影《黄金时代》，然后在简书上看别人写的影评不错就喜欢上这个平台了，自己也经常在上面发布一些文章，虽然只有32个粉丝</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col s12 m4 l4 my-info">
+                        <div class="info1">
+                            <div class="logo-info">
+                                <div class="bk-img frind-card9">
+                                    <span>GitHub</span>
+                                </div>
+                            </div>
+                            <div class="bk-title">
+                                <span>很久之前还在用SVN的时候，就看技术网站不停的推荐GitHub，但是注册后没发现什么好处，知道如何使用Git进行项目管理的时候才知道它的好</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <article>
-                <div class="row tags-posts">
-                    <div class="article tag-post col s12 m4 l4">
-                        <div class="card">
-                            <div class="skill-title center-align">知识技能图</div>
-                            <hr class="skill-hr">
-                            <div style="height:400px">
-
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">我的现在</div>
+                <div class="row">
+                    <div class="col s12 m4 l4 my-info">
+                        <div class="info1">
+                            <div class="logo-info">
+                                <div class="bk-img frind-card12">
+                                    <span>码酱</span>
+                                </div>
+                            </div>
+                            <div class="bk-title">
+                                <span>努力做有价值的技术文章</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="article tag-post col s12 m4 l4">
-                        <div class="card">
-                            <div class="skill-title center-align">个人成长图</div>
-                            <hr class="skill-hr">
-                            <div  style="height:400px">
 
+                    </div>
+                    <div class="col s12 m4 l4 my-info">
+                        <div class="info1">
+                            <div class="logo-info">
+                                <div class="bk-img frind-card11">
+                                    <span>Ghost</span>
+                                </div>
+                            </div>
+                            <div class="bk-title">
+                                <span>不断优化的一款Ghost博客主题</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="article tag-post col s12 m4 l4">
-                        <div class="card">
-                            <div class="skill-title center-align">个人成长图</div>
-                            <hr class="skill-hr">
-                            <div  style="height:400px">
 
+                    </div>
+                    <div class="col s12 m4 l4 my-info">
+                        <div class="info1">
+                            <div class="logo-info">
+                                <div class="bk-img frind-card10">
+                                    <span>Study2</span>
+                                </div>
+                            </div>
+                            <div class="bk-title">
+                                <span>Study笔记的升级版本</span>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
-            </article>
+            </div>
         </div>
+    </div>
+
+    <div class="container">
+        <article>
+            <div class="row tags-posts">
+                <div class="article tag-post col s12 m12 l12">
+                    <div class="card">
+                        <div class="skill-title center-align">年度能力总结图</div>
+                        <hr class="skill-year">
+                        <div id="year-power-skil" style="height:400px">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
     </main>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0.rc2/echarts.min.js"></script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var yearpowerskil = echarts.init(document.getElementById('year-power-skil'));
+        var yearoption = {
+            legend: {},
+            tooltip: {},
+            dataset: {
+                source: [
+                    ['product', '2012', '2013', '2014', '2015'],
+                    ['Matcha Latte', 41.1, 30.4, 65.1, 53.3],
+                    ['Milk Tea', 86.5, 92.1, 85.7, 83.1],
+                    ['Cheese Cocoa', 24.1, 67.2, 79.5, 86.4]
+                ]
+            },
+            xAxis: [
+                { type: 'category', gridIndex: 0 },
+                { type: 'category', gridIndex: 1 }
+            ],
+            yAxis: [
+                { gridIndex: 0 },
+                { gridIndex: 1 }
+            ],
+            grid: [
+                { bottom: '55%' },
+                { top: '55%' }
+            ],
+            series: [
+                // These series are in the first grid.
+                { type: 'bar', seriesLayoutBy: 'row' },
+                { type: 'bar', seriesLayoutBy: 'row' },
+                { type: 'bar', seriesLayoutBy: 'row' },
+                // These series are in the second grid.
+                { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+                { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+                { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },
+                { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 }
+            ]
+        };
+         yearpowerskil.setOption(yearoption);
+
+    </script>
