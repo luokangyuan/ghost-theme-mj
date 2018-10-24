@@ -39,6 +39,9 @@ h2 {
     font-weight: bold;
     line-height: 1.9rem;
     margin-left: -6px;
+    /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 160%);
+    padding: 5px;
+    border-radius: 10px; */
 }
 
 h3 {
