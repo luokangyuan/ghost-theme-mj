@@ -300,9 +300,9 @@ hr.skill-hr {
 
 #toc {
     position: fixed;
-    left: 48%;
-    top: 90px;
-    margin-left: 514px;
+    left: 50%;
+    top: 80px;
+    margin-left: 515px;
     background: #fff;
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     border-radius: 5px;
@@ -320,4 +320,7 @@ hr.skill-hr {
 .nav-list>.active>a,
 .nav-list>.active>a:hover {
     color: #e66f0f;
+}
+.hiden-div{
+    display: none;
 }

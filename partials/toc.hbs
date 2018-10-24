@@ -1,6 +1,6 @@
-<div id="toc" style="display:none"></div>
+<div id="toc"></div>
 
-<link rel="stylesheet" type="text/css" href="../assets/css/my.css">  
+<link rel="stylesheet" type="text/css" href="../assets/css/my.css">
 
 <script src="../assets/libs/toc/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="../assets/libs/toc/jquery.tocify.js"></script>
@@ -12,7 +12,16 @@
         extendPage: false, // 页面不够长时拉长页面，这里选择关闭因为感觉留出大片空白不好看- -
         highlightDefault: true // 自动高亮第一条
     }).data("toc-tocify");
-    prettyPrint();
-    $(".optionName").popover({ trigger: "hover" });
+   
+    
+    var toc = $("#toc");
+    $(window).scroll(function () {
+        var topSize = $(window).scrollTop();
+        if(topSize > 320){
+            toc.removeClass("hiden-div");
+        }else{
+            toc.addClass("hiden-div")
+        }
+    });
 
 </script>
