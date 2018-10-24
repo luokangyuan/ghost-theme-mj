@@ -263,17 +263,6 @@ hr.skill-hr {
     background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
 }
 
-#toc {
-    position: fixed;
-    left: 50%;
-    top: 250px;
-    margin-left: -738px;
-}
-
-#toc ul li a {
-    color: #000000
-}
-
 .my-info .info1 {
     padding: 10px 20px;
 }
@@ -306,9 +295,26 @@ hr.skill-hr {
     width: 100%;
 }
 
+
+/* toc导航样式 */
+
+#toc {
+    position: fixed;
+    left: 45%;
+    top: 250px;
+    margin-left: -738px;
+    background: #fff;
+}
+
+#toc ul li a {
+    color: #cccccc
+}
+
+.nav-list>.active>a {
+    color: #e66f0f !important;
+}
+
 .nav-list>.active>a,
 .nav-list>.active>a:hover {
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-    background-color: #0088cc;
-    color: #00f2fe;
+    color: #e66f0f;
 }
