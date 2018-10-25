@@ -157,9 +157,11 @@ hr.skill-hr {
 }
 
 .foot-bg-color {
-    background-image: -webkit-linear-gradient(0deg, #4A4A4A, #2B2B2B);
+    background: linear-gradient(to right, #141e30, #243b55);
 }
-
+.foot-titlt-bg{
+    color: #26a8ed !important;
+}
 .tag-bg-color {
     background-color: #007AFF;
 }
