@@ -181,7 +181,7 @@ mark {
 }
 
 .progress-bar {
-    background-color: #0f9d58;
+    background: linear-gradient(to right, #141e30, #243b55);
     height: 4px;
     position: fixed;
     bottom: 0;
@@ -1128,7 +1128,7 @@ footer .copy-right {
 }
 
 .top-scroll .btn-floating {
-    background-color: #e91e63
+    background-color: #007AFF
 }
 
 .top-scroll i {
