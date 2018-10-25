@@ -191,6 +191,7 @@ hr.skill-hr {
 .frind-ship .title img {
     width: 100px;
     height: 100px;
+    flex-shrink: 0;
 }
 
 .frind-ship .title h1 {
@@ -321,6 +322,7 @@ hr.skill-hr {
 .nav-list>.active>a:hover {
     color: #e66f0f;
 }
-.hiden-div{
+
+.hiden-div {
     display: none;
 }
