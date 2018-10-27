@@ -25,11 +25,11 @@
 
 ## Ghost主题首页
 
-![image-20181028013100276](http://image.luokangyuan.com/2018-10-27-173123.png)
+![image-20181028013100276](http://image.luokangyuan.com/2018-10-27-175930.png)
 
 **还有底部信息**
 
-![image-20181028013239769](http://image.luokangyuan.com/2018-10-27-173246.png)
+![image-20181028013239769](http://image.luokangyuan.com/2018-10-27-180017.png)
 
 ## Ghost主题文章详情页面
 
@@ -37,7 +37,7 @@
 
 **还有代码高亮和文章目录信息**
 
-![image-20181028014632042](http://image.luokangyuan.com/2018-10-27-174635.png)
+![image-20181028014632042](http://image.luokangyuan.com/2018-10-27-180027.png)
 
 **当然，还有打赏功能**
 
