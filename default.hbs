@@ -1,3 +1,6 @@
+
+<embed src="/assets/redio/test.mp3" style="height:0px; width:0px;" autostart=true>
+
 <!DOCTYPE html>
 <html lang="{{lang}}">
 
@@ -18,20 +21,20 @@
     <link rel="stylesheet" type="text/css" href="{{asset "libs/lightGallery/css/lightgallery.min.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/matery.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/my.css"}}">
-    <link rel="stylesheet" type="text/css" href="{{asset "libs/prism/prism.css"}}" >
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/prism/prism.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/articClassification.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/ihover.min.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "libs/bootstrap/button.css"}}">
     <script src="{{asset "libs/jquery/jquery-2.2.0.min.js"}} "></script>
-    
-  {{ghost_head}}
+
+    {{ghost_head}}
 </head>
 
 <body>
     {{> site-nav}}
     {{{body}}}
     {{> floating-header}}
-    
+
 
     <!-- 搜索遮罩框 -->
     <div id="searchModal" class="modal">
@@ -40,6 +43,7 @@
                 <span class="title">搜索</span>
                 <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" autofocus="">
             </div>
+
             <div id="searchResult"></div>
         </div>
     </div>

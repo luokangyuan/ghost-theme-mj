@@ -1,0 +1,73 @@
+<embed src="/assets/redio/test.mp3" autostart=true>
+
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/awesome/css/font-awesome.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/materialize/css/materialize.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/aos/aos.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/animate/animate.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/lightGallery/css/lightgallery.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/matery.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/my.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/prism/prism.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/articClassification.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/ihover.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "libs/bootstrap/button.css"}}">
+    <script src="{{asset "libs/jquery/jquery-2.2.0.min.js"}} "></script>
+
+    {{ghost_head}}
+</head>
+
+<body>
+    
+    {{> site-nav}}
+    {{{body}}}
+    {{> floating-header}}
+
+
+    <!-- 搜索遮罩框 -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <div class="search-header">
+                <span class="title">搜索</span>
+                <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" autofocus="">
+            </div>
+
+            <div id="searchResult"></div>
+        </div>
+    </div>
+
+    <script src="/js/search.js"></script>
+    <!-- 回到顶部按钮 -->
+    <div id="backTop" class="top-scroll">
+        <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+    </div>
+    <script src="{{asset "libs/materialize/js/materialize.min.js"}}"></script>
+    <script src="{{asset "libs/masonry/masonry.pkgd.min.js"}}"></script>
+    <script src="{{asset "libs/aos/aos.js"}}"></script>
+    <script src="{{asset "libs/scrollprogress/scrollProgress.min.js"}}"></script>
+    <script src="{{asset "libs/lightGallery/js/lightgallery-all.min.js"}}"></script>
+    <script src="{{asset "js/matery.js"}}"></script>
+    <script src="{{asset "libs/prism/prism.js"}}"></script>
+    <script src="{{asset "js/mj.js"}}"></script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    {{ghost_foot}}
+    <script>
+       
+    </script>
+</body>
+
+</html>
