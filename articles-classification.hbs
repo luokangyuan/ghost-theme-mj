@@ -30,18 +30,14 @@
                         <div class="card">
                             <div class="skill-title center-align">知识技能图</div>
                             <hr class="skill-hr">
-                            <div id="skill-echart" style="height:400px">
-
-                            </div>
+                            <div class="chart" id="leida" style="height:400px"></div>
                         </div>
                     </div>
                     <div class="article tag-post col s12 m6 l6">
                         <div class="card">
-                            <div class="skill-title center-align">个人成长图</div>
+                            <div class="skill-title center-align">年度成长图</div>
                             <hr class="skill-hr">
-                            <div id="power-echart" style="height:400px">
-
-                            </div>
+                           <div class="chart" id="line" style="height:400px"></div>
                         </div>
                     </div>
 
@@ -49,7 +45,9 @@
             </article>
         </div>
     </main>
-    
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.js"></script>
+    <script src="{{asset "js/guidang.js"}}"></script>
 
 
     {{!--
@@ -61,100 +59,4 @@
     <script src="{{asset "js/matery.js"}}"></script>
     <script src="{{asset "libs/prism/prism.js"}}"></script> --}}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0.rc2/echarts.min.js"></script>
-    <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var skillChart = echarts.init(document.getElementById('skill-echart'));
-        var powerChart = echarts.init(document.getElementById('power-echart'));
-        //请求数据
-       var names = [];
-       var values  = [];
-       $(".classificationColor").text(function(index,text){
-           var item = {};
-           item.name = text.trim().split("(")[0].trim();
-           item.max = 10;
-           names.push(item);
-           values.push(parseInt(text.trim().split("(")[1].trim().split(")")[0]))
-       });
-        // 指定图表的配置项和数据
-        var skillOption = {
-            title: {
-                text: ''
-            },
-            tooltip: {},
-            legend: {
-                data: ['知识技能'],
-                show: false
-            },
-            radar: {
-                // shape: 'circle',
-                name: {
-                    textStyle: {
-                        color: '#fff',
-                        backgroundColor: '#999',
-                        borderRadius: 3,
-                        padding: [3, 5]
-                    }
-                },
-                indicator: names
-            },
-            series: [{
-                name: '知识技能',
-                type: 'radar',
-                // areaStyle: {normal: {}},
-                data: [
-                    {
-                        value: values,
-                        name: '知识技能'
-                    }
-                ]
-            }]
-        };
-        var powerOption = {
-            title: {
-                text: '',
-                subtext: '',
-                show: false
-            },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'shadow'
-                }
-            },
-            legend: {
-                data: ['2017年', '2018年']
-            },
-            grid: {
-                left: '3%',
-                right: '4%',
-                bottom: '3%',
-                containLabel: true
-            },
-            xAxis: {
-                type: 'value',
-                boundaryGap: [0, 0.01]
-            },
-            yAxis: {
-                type: 'category',
-                data: ['项目经验', '编码规范能力', '大数据开发能力', '前端编码能力', '数据库设计能力', 'Java开发能力']
-            },
-            series: [
-                {
-                    name: '2017年',
-                    type: 'bar',
-                    data: [4, 5, 6, 2, 4, 4]
-                },
-                {
-                    name: '2018年',
-                    type: 'bar',
-                    data: [7, 7, 8, 5, 7, 9]
-                }
-            ]
-        };
-
-        // 使用刚指定的配置项和数据显示图表。
-        skillChart.setOption(skillOption);
-        powerChart.setOption(powerOption);
-    </script>
-
+    
