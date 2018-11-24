@@ -3,6 +3,10 @@ $(function () {
     $(".classificationColor").each(function (index, item) {
         $(item).css("background-color", color[index % color.length])
     })
+    $(".cd-timeline-content").each(function(index,item){
+        var frind = "frind-card" + ((index % 10)+1);
+        $(item).addClass(frind);
+    })
     
 })
 
