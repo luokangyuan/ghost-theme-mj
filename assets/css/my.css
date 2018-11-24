@@ -328,3 +328,56 @@ hr.skill-hr {
 .hiden-div {
     display: none;
 }
+/* w文章归档样式 */
+.cd-timeline-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  }
+  .cd-timeline-img img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+  }
+  .cd-timeline-img.cd-picture {
+    background: #75ce66;
+  }
+  .cd-timeline-img.cd-movie {
+    background: #c03b44;
+  }
+  .cd-timeline-img.cd-location {
+    background: #f0ca45;
+  }
+#cd-timeline{
+    margin-top: 40px;
+}
+.cd-timeline-content h2{
+    background: transparent;
+    line-height: .9rem;
+    margin-bottom: .5rem;
+    color: #fff;
+}
+.cd-timeline-content p{
+    color: #fff !important;
+    padding: 5px !important;
+}
+.cd-read-more{
+    display: inline-block !important;
+    cursor: pointer !important;
+    border: none !important;
+    box-sizing: border-box !important;
+    transition-property: all !important;
+    transition-duration: .3s !important;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%) !important;
+    border-radius: 15px !important;
+    width: 100px !important;
+    text-align: center !important;
+    
+}
+  
