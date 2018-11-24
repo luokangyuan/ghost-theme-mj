@@ -53,31 +53,7 @@
     <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.js"></script>
     <script src="{{asset "js/guidang.js"}}"></script>
     <script src="{{asset "js/jqcloud-1.0.4.min.js"}}"></script>
-    <script>
-        $(function () {
-            var word_list = [];
-            var obj;
-            $.get(ghost.url.api('tags',{include: "count.posts"})).done(function (data) {
-                $.each(data.tags,function(index,item){
-                    obj = new Object();
-                    obj.text =  item.name;
-                    obj.weight = item.count.posts;
-                    word_list.push(obj);
-                })
-                console.log('tags', data.tags);
-            }).fail(function (err) {
-                console.log(err);
-            });
-             $("#tag-wordcloud").jQCloud(word_list, {
-                removeOverflowing: true,
-                shape: "elliptic",
-                height: 200,
-                autoResize: true
-            });
-            
-        })
-
-    </script>
+ 
     {{!--
     <script src="{{asset "libs/materialize/js/materialize.min.js"}}"></script>
     <script src="{{asset "libs/masonry/masonry.pkgd.min.js"}}"></script>
