@@ -8,7 +8,7 @@ $.get(ghost.url.api('tags', {limit: 'all', 'include': 'count.posts'})).done(func
     var indicatorArrTmp = [];
     var max = 0;
     for(var tagItem in data.tags){
-        if(data.tags[tagItem].count.posts > 4){
+        if(data.tags[tagItem].count.posts > 3){
             var indicatorTmp = {}
             indicatorTmp.name = data.tags[tagItem].name;
             indicatorTmp.max = 50;

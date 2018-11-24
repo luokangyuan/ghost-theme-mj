@@ -3,8 +3,8 @@
         <div id="tags" class="container tag-tip-container">
             <div class="card">
                 <div class="card-content">
-                    <div class="tag-title center-align">文章标签</div>
-                    <div class="tag-chips">
+                    <div class="tag-title center-align"  data-aos="zoom-in">文章标签</div>
+                    <div class="tag-chips" data-aos="zoom-in">
                         {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
                         {{#foreach tags}}
                         {{#if count.posts}}
@@ -28,14 +28,14 @@
                 <div class="row tags-posts">
                     <div class="article tag-post col s12 m6 l6">
                         <div class="card">
-                            <div class="skill-title center-align">知识技能图</div>
+                            <div class="skill-title center-align" data-aos="fade-right">知识技能图</div>
                             <hr class="skill-hr">
                             <div class="chart" id="leida" style="height:400px"></div>
                         </div>
                     </div>
                     <div class="article tag-post col s12 m6 l6">
                         <div class="card">
-                            <div class="skill-title center-align">年度成长图</div>
+                            <div class="skill-title center-align" data-aos="fade-left">年度成长图</div>
                             <hr class="skill-hr">
                            <div class="chart" id="line" style="height:400px"></div>
                         </div>
