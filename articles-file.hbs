@@ -32,7 +32,7 @@
                             <section id="cd-timeline" class="cd-container">
                                 {{#get "posts" limit="all" include="author" order="published_at desc" }}
                                 {{#foreach posts}}
-                                <div class="cd-timeline-block ">
+                                <div class="cd-timeline-block " data-aos="fade-up" data-aos-duration="3000">
                                     <div class=" cd-timeline-img cd-picture ">
                                         {{#if feature_image}}
                                         <img src="{{feature_image}}" class="responsive-img" alt="{{title}}">
