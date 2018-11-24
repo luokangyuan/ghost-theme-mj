@@ -389,4 +389,9 @@ hr.skill-hr {
     border: 7px solid transparent;
     border-right: 7px solid #ffffff;
 }
+/* 词云 */
+#tag-wordcloud {
+    width: 100%;
+    height: 300px;
+}
   

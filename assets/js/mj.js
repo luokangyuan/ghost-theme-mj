@@ -7,6 +7,8 @@ $(function () {
         var frind = "frind-card" + ((index % 10)+1);
         $(item).addClass(frind);
     })
+
+    
     
 })
 
