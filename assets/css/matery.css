@@ -983,7 +983,7 @@ table tr:nth-child(2n), thead {
     }
 
     .cd-timeline-content .cd-read-more {
-        float: left;
+        /* float: left; */
     }
 
     .cd-timeline-block:nth-child(even) .cd-timeline-content {
