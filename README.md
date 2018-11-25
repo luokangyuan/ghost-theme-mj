@@ -45,9 +45,9 @@
 
 ## 1.3.使用方法
 
-**方法一：**下载压缩包，在ghost后台上传主题包即可
+**方法一：** 下载压缩包，在ghost后台上传主题包即可
 
-**方法二：**使用git命令下载在theme目录下，推荐使用方法一
+**方法二：** 使用git命令下载在theme目录下，推荐使用方法一
 
 ```bash
 git clone git@github.com:luokangyuan/ghost-theme-mj.git
@@ -57,14 +57,14 @@ git clone git@github.com:luokangyuan/ghost-theme-mj.git
 
 ## 2.1.不忘感谢他人
 
-* [闪烁之狐](https://github.com/blinkfox)
-* [杉木博客](http://w3more.cn/)
-* ...
+- [闪烁之狐](https://github.com/blinkfox)
+- [杉木博客](http://w3more.cn/)
+- ...
 
 ## 2.2.推荐主题
 
-* [hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery)：Hexo主题；预览地址：[闪烁之狐](https://blinkfox.github.io/)
-* [hackSeason](https://github.com/mrbin1573/hackSeason)：Ghost博客主题，预览地址：[杉木博客](http://w3more.cn/)
+- [hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery)：Hexo主题；预览地址：[闪烁之狐](https://blinkfox.github.io/)
+- [hackSeason](https://github.com/mrbin1573/hackSeason)：Ghost博客主题，预览地址：[杉木博客](http://w3more.cn/)
 
 ## 2.3.说明
 
