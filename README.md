@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.io/luokangyuan/ghost-theme-mj.svg)](http://hits.dwyl.io/luokangyuan/ghost-theme-mj) [![GitHub issues](https://img.shields.io/github/issues/luokangyuan/ghost-theme-mj.svg)](https://github.com/luokangyuan/ghost-theme-mj/issues) [![GitHub license](https://img.shields.io/github/license/luokangyuan/ghost-theme-mj.svg)](https://github.com/luokangyuan/ghost-theme-mj/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)[![GitHub forks](https://img.shields.io/github/forks/luokangyuan/ghost-theme-mjy.svg)](https://github.com/luokangyuan/ghost-theme-mj/network) [![GitHub stars](https://img.shields.io/github/stars/luokangyuan/ghost-theme-mj.svg)](https://github.com/luokangyuan/ghost-theme-mj/stargazers)
+
 # 一、ghost-theme-mj主题简介
 
 这是一个[Ghost](https://ghost.org)博客主题，Ghost博客是一个很不错的写作平台，这一点在各大网站都被不少人推荐，相信你也已经有了自己的Ghost博客，如果你还没有自己的博客，准备搭建，可以参考我的搭建博客教程，[Ghost博客搭建](http://luokangyuan.com/ghostbo-ke-an-zhuang/)，如果你已经搭建好了，那么我们一起看看吧，
