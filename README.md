@@ -41,7 +41,7 @@
 
 ### 大佬页面
 
-![image-20181125104102424](http://image.luokangyuan.com/2018-11-25-024105.png)
+![image-20181125110357139](http://image.luokangyuan.com/2018-11-25-030401.png)
 
 ## 1.3.使用方法
 
