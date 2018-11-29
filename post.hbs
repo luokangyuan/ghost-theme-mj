@@ -31,6 +31,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="card gitalk-card" data-aos="fade-up">
+                    <div id="gitalk-container" class="card-content"></div>
+                </div>
             </div>
         </div>
         <div class="col s2">
@@ -40,10 +43,20 @@
             </div>
         </div>
     </div>
-
-
     {{/post}}
-
-
-
     </main>
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+    <script>
+        let url = window.location.href;
+        let gitalk = new Gitalk({
+            clientID: 'd0997440eafac77d9281',
+            clientSecret: '8b287af6b9e65b2d788ecb3991712ea691d9fea9',
+            repo: 'ghost-theme-mj',
+            owner: 'luokangyuan',
+            admin: ['luokangyuan'],
+            id: url,
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        });
+
+        gitalk.render('gitalk-container');
+    </script>
