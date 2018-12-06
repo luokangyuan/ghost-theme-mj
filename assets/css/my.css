@@ -378,6 +378,23 @@ hr.skill-hr {
     border-radius: 15px !important;
     width: 100px !important;
     text-align: center !important;
+    margin-left: 10px;
+}
+.gd-date{
+    width: 130px !important;
+    float: left;
+    text-align: center !important;
+    cursor: pointer !important;
+    border-bottom: 2px solid #fff !important;
+    box-sizing: border-box !important;
+    transition-property: all !important;
+    transition-duration: .3s !important;
+    /* background: #007AFF !important; */
+    /* border-radius: 15px !important; */
+    line-height: 1.5rem;
+    padding: .6em .6em;
+    color: #fff;
+    margin-right: 10px;
 }
 .cd-timeline-content::before {
     content: '';
@@ -394,5 +411,5 @@ hr.skill-hr {
     width: 100%;
     height: 300px;
 }
-/* gitalk */
+
   
