@@ -3,21 +3,21 @@
     <div id="tags" class="container tag-tip-container">
         <div class="card">
             <div class="card-content">
-                <div class="tag-title center-align">文章标签</div>
+                <div class="tag-title center-align">生之时钟</div>
                 <div class="tag-chips">
-                    {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
+                    {{!-- {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
                     {{#foreach tags}}
-                    {{#if count.posts}}
+                    {{#if count.posts}} --}}
                     <a href="/articles/classification/{{slug}}">
                         <span class="chip center-align waves-effect waves-light
                              chip-default classificationColor"
-                            style="background-color: #F9EBEA;">{{name}}
-                            <span class="tag-length">({{count.posts}})</span>
+                            style="background-color: #F9EBEA;">码酱，你在这个世界存在了24年284个月1236周8653日207694月，剩下的日子你可以看书24219次，吃饭72657次，度周末3459次，度长假132次
+                            {{!-- <span class="tag-length">({{count.posts}})</span> --}}
                         </span>
                     </a>
-                    {{/if}}
+                    {{!-- {{/if}}
                     {{/foreach}}
-                    {{/get}}
+                    {{/get}} --}}
                 </div>
             </div>
         </div>
