@@ -381,7 +381,7 @@ hr.skill-hr {
     margin-left: 10px;
 }
 .gd-date{
-    width: 130px !important;
+    width: 135px !important;
     float: left;
     text-align: center !important;
     cursor: pointer !important;
@@ -411,5 +411,7 @@ hr.skill-hr {
     width: 100%;
     height: 300px;
 }
-
+.classificationColor:hover{
+    transform: scale(1.2, 1.2)
+}
   
