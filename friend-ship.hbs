@@ -16,18 +16,19 @@
             async: true,
             success: function (data) {
                 $.each(JSON.parse(data).friends, function(index, item){
+        
                     friend += '<div class="article tag-post col s12 m4 l4" data-aos="fade-up" data-aos-duration="2000">\
-                    <div class="card frind-card">\
+                    <div class="card frind-card'+((index % 10)+1) +'">\
                         <div class="frind-ship">\
                             <div class="title">\
                                 <img src="'+ item.headSculpture+'" alt="img">\
                                 <div>\
-                                    <h1>'+ item.name +'</h1>\
+                                    <h1 class="friend-name">'+ item.name +'</h1>\
                                     <p>'+ item.introduction +'</p>\
                                 </div>\
                             </div>\
                             <div class="friend-button">\
-                                <a href="' + item.href +'" target="_blank" class="button button-glow button-rounded button-caution">'+ item.hrefTitl +'</a>\
+                                <a href="' + item.href +'" target="_blank" class="button button-glow button-rounded button-caution">'+ item.hrefTitle +'</a>\
                             </div>\
                         </div>\
                     </div>\
