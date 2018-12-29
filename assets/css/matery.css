@@ -35,14 +35,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.55rem;
-    font-weight: bold;
-    line-height: 1.9rem;
-    margin-left: -6px;
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0 15px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
 }
 
 h3 {
