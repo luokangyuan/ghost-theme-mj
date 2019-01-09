@@ -1,0 +1,275 @@
+<style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block
+    }
+
+    body {
+        line-height: 1
+    }
+
+    ol,
+    ul {
+        list-style: none
+    }
+
+    blockquote,
+    q {
+        quotes: none
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0
+    }
+    
+:root {
+	--square-size: 15px;
+	--square-gap: 5px;
+	--week-width: calc(var(--square-size) + var(--square-gap));
+}
+
+.months {
+	grid-area: months;
+}
+
+.days {
+	grid-area: days;
+}
+
+.squares {
+	grid-area: squares;
+}
+
+.graph {
+	display: inline-grid;
+	grid-template-areas: "empty months" "days squares";
+	grid-template-columns: auto 1fr;
+	grid-gap: 10px;
+}
+
+.months {
+	display: grid;
+	grid-template-columns: calc(var(--week-width) * 4)/* Jan */
+	calc(var(--week-width) * 4)/* Feb */
+	calc(var(--week-width) * 4)/* Mar */
+	calc(var(--week-width) * 5)/* Apr */
+	calc(var(--week-width) * 4)/* May */
+	calc(var(--week-width) * 4)/* Jun */
+	calc(var(--week-width) * 5)/* Jul */
+	calc(var(--week-width) * 4)/* Aug */
+	calc(var(--week-width) * 4)/* Sep */
+	calc(var(--week-width) * 5)/* Oct */
+	calc(var(--week-width) * 4)/* Nov */
+	calc(var(--week-width) * 5)/* Dec */
+	;
+}
+
+.days,
+.squares {
+	display: grid;
+	grid-gap: var(--square-gap);
+	grid-template-rows: repeat(5, var(--square-size));
+}
+
+.squares {
+	grid-auto-flow: column;
+	grid-auto-columns: var(--square-size);
+}
+
+
+/* Other styling */
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 12px;
+}
+
+
+    .graph {
+        /*padding: 20px;
+	border: 1px #e1e4e8 solid;*/
+        margin: 20px;
+    }
+
+    .days li:nth-child(odd) {
+        visibility: hidden;
+    }
+
+    .squares li {
+        background-color: #DB9019;
+    }
+
+    .squares li[data-level="1"] {
+        background-color: #5ED5D1;
+    }
+
+    .squares li[data-level="2"] {
+        background-color: #FF6E97;
+    }
+
+    .squares li[data-level="3"] {
+        background-color: #F1AAA6;
+    }
+
+    .squares li[data-level="4"] {
+        background-color: #1AD6FD;
+    }
+
+    .squares li[data-level="10"] {
+        background-color: #f1f1f1;
+        border: 1px solid #dedede;
+    }
+</style>
+<div class="graph">
+    <ul class="squares"></ul>
+</div>
+<script>
+
+    const squares = document.querySelector('.squares');
+    let year = new Date().getFullYear() + "-" + (new Date().getMonth() + 1);
+    let past = getMonthBetween('1995-3', year);
+    let ys = past % 3;
+    past = past / 3;
+    if (ys != 0) {
+        past = past + 1;
+    }
+    for (var i = 1; i <= past; i++) {
+        const level = Math.floor(Math.random() * 4);
+        squares.insertAdjacentHTML('beforeend', `<li data-level="${level}"></li>`);
+    }
+    for (var i = 1; i <= (301 - past); i++) {
+        const level = 10;
+        squares.insertAdjacentHTML('beforeend', `<li data-level="${level}"></li>`);
+    }
+
+    function getMonthBetween(start, end) {
+        var result = [];
+        var s = start.split("-");
+        var e = end.split("-");
+        var min = new Date();
+        var max = new Date();
+        min.setFullYear(s[0], s[1]);
+        max.setFullYear(e[0], e[1]);
+        var curr = min;
+        while (curr <= max) {
+            var month = curr.getMonth();
+            var str = curr.getFullYear() + "-" + (month);
+            var s = curr.getFullYear() + "-0";
+            if (str == s) {
+                str = curr.getFullYear() + "-12";
+            }
+            result.push(str);
+            curr.setMonth(month + 1);
+        }
+        return result.length;
+    }
+
+
+</script>
