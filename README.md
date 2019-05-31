@@ -74,3 +74,6 @@ git clone git@github.com:luokangyuan/ghost-theme-mj.git
 
 **Other functions are being developed. Due to the overtime hours of work, but the theme of perfecting for half an hour every night**, if you feel good, welcome to a start support, the project address[ghost-theme-mj](https://github.com/luokangyuan/ghost-theme-mj), if you support Leave your name, I will write to the sponsorship wall, don't forget everyone who gives me help and support in my life, thank you! ! !
 
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/luokangyuan/ghost-theme-mj.svg)](https://starchart.cc/luokangyuan/ghost-theme-mj)
