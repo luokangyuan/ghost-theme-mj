@@ -6,29 +6,6 @@
 
 这是一个[Ghost](https://ghost.org)博客主题，Ghost博客是一个很不错的写作平台，这一点在各大网站都被不少人推荐，相信你也已经有了自己的Ghost博客，如果你还没有自己的博客，准备搭建，可以参考我的搭建博客教程，[Ghost博客搭建](http://luokangyuan.com/ghostbo-ke-an-zhuang/)，如果你已经搭建好了，那么我们一起看看吧，
 
-## 修改路由配置
-
-修改配置文件 `/var/www/ghost/content/settings$ vim routes.yaml `
-
-```bash
-routes:
-  /about/me/: about-me
-  /articles/classification/: articles-classification
-  /articles/file/: articles-file
-  /recard/list/people/: recard-list-people
-  /friend/ship/: friend-ship
-collections:
-  /:
-    permalink: /{slug}/
-    template:
-      - index
-
-taxonomies:
-  tag: /articles/classification/{slug}/
-  author: /author/{slug}/
-
-```
-
 ## 1.1.Ghost主题功能简介
 
 - [x] 博客文章首页展示功能

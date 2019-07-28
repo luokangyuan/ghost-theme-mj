@@ -1,21 +1,22 @@
-{{!< default}} <main class="content">
+{{!< default}}
+<main class="content">
     <div id="tags" class="container tag-tip-container">
         <div class="card">
             <div class="card-content">
                 <div class="tag-title center-align" data-aos="zoom-in">文章标签</div>
                 <div class="tag-chips" data-aos="zoom-in">
                     {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
-                    {{#foreach tags}}
-                    {{#if count.posts}}
-                    <a href="/articles/classification/{{slug}}">
+                        {{#foreach tags}}
+                            {{#if count.posts}}
+                                <a href="/articles/classification/{{slug}}">
                         <span class="chip center-align waves-effect waves-light
                              chip-default classificationColor"
-                            style="background-color: #F9EBEA;">{{name}}
+                              style="background-color: #F9EBEA;">{{name}}
                             <span class="tag-length">({{count.posts}})</span>
                         </span>
-                    </a>
-                    {{/if}}
-                    {{/foreach}}
+                                </a>
+                            {{/if}}
+                        {{/foreach}}
                     {{/get}}
                 </div>
             </div>
@@ -48,17 +49,7 @@
             </div>
         </article>
     </div>
-    </main>
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.js"></script>
-    <script src="{{asset "js/guidang.js"}}"></script>
-    
- 
-    {{!--
-    <script src="{{asset "libs/materialize/js/materialize.min.js"}}"></script>
-    <script src="{{asset "libs/masonry/masonry.pkgd.min.js"}}"></script>
-    <script src="{{asset "libs/aos/aos.js"}}"></script>
-    <script src="{{asset "libs/scrollprogress/scrollProgress.min.js"}}"></script>
-    <script src="{{asset "libs/lightGallery/js/lightgallery-all.min.js"}}"></script>
-    <script src="{{asset "js/matery.js"}}"></script>
-    <script src="{{asset "libs/prism/prism.js"}}"></script> --}}
+</main>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.js"></script>
+<script src="{{asset "js/guidang.js"}}"></script>

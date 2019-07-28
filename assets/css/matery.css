@@ -37,6 +37,7 @@ h1 {
 h2 {
     font-size: 1.75rem;
     line-height: 1.225;
+    font-weight: bold;
     margin: 35px 0 15px;
     padding-bottom: 0.5em;
     border-bottom: 1px solid #ddd;
@@ -767,7 +768,7 @@ table tr:nth-child(2n), thead {
 }
 
 #cd-timeline {
-    /* width: 90%; */
+    width: 90%;
     position: relative;
     /* padding: 2em 0; */
     margin-top: 1em;

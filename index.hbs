@@ -1,57 +1,60 @@
-{{!< default}} {{!-- The main content area --}} <main class="content">
-    <div class="container notice" style="max-width: 1270px">
-        <div class="card" style="width: 1270px">
-            <div class="card-content" style="padding: 0px">
-                 {{> life}}
-                {{!-- <i class="fa fa-volume-up fa-lg fa-fw text-color"></i>此生之路，我将走过；走过这一次，便再也无法重来。所有力所能及的善行，所有充盈于心的善意，我将毫不吝惜，即刻倾于。我将不再拖延，再不淡漠，只因此生之路，再也无法重来。 --}}
-            </div>
-        </div>
-    </div>
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            {{#foreach posts}}
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="{{url}}">
-                        <div class="card-image">
-                            {{#if feature_image}}
-                            <img src="{{feature_image}}" class="responsive-img" alt="{{title}}">
-                            {{else}}
-                            <img src="http://image.luokangyuan.com/default.jpg" class="responsive-img" alt="{{title}}">
-                            {{/if}}
-                            <span class="card-title">{{title}}</span>
-                        </div>
+{{!< default}} 
 
-                        <div class="card-content article-content">
-                            <div class="summary">{{excerpt characters="60"}}</div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="fa fa-calendar fa-fw"></i>{{date format="YYYY-MM-DD"}}
-                                </span>
-                                {{#foreach authors}}
-                                <span class="publish-author">
-                                    <i class="fa fa-user fa-fw"></i>
-                                    {{name}}
-                                </span>
-                                {{/foreach}}
-                            </div>
-                        </div>
-
-                        {{#if tags}}
-                        <div class="card-action article-tags">
-                            {{#foreach tags}}
-                            <a href="{{url}}" target="_blank">
-                                <span class="chip tag-bg-color">{{name}}</span>
-                            </a>
-                            {{/foreach}}
-                        </div>
-                        {{/if}}
-                    </a>
+    {{!-- The main content area --}}
+    <main class="content">
+        <div class="container notice">
+            <div class="card">
+                <div class="card-content">
+                    <i class="fa fa-volume-up fa-lg fa-fw text-color"></i>此生之路，我将走过；走过这一次，便再也无法重来。所有力所能及的善行，所有充盈于心的善意，我将毫不吝惜，即刻倾于。我将不再拖延，再不淡漠，只因此生之路，再也无法重来。
                 </div>
             </div>
-            {{/foreach}}
         </div>
-    </article>
+        <!-- 所有文章卡片 -->
+        
+        <article id="articles" class="container articles">
+            <div class="row article-row">
+                {{#foreach posts}}
+                <div class="article col s12 m6 l4" data-aos="zoom-in">
+                    <div class="card">
+                        <a href="{{url}}">
+                            <div class="card-image">
+                                {{#if feature_image}}
+                                <img src="{{feature_image}}" class="responsive-img" alt="{{title}}">
+                                {{else}}
+                                <img src="http://image.luokangyuan.com/default.jpg" class="responsive-img" alt="{{title}}">
+                                {{/if}}
+                                <span class="card-title">{{title}}</span>
+                            </div>
+
+                            <div class="card-content article-content">
+                                <div class="summary">{{excerpt characters="60"}}</div>
+                                <div class="publish-info">
+                                    <span class="publish-date">
+                                        <i class="fa fa-calendar fa-fw"></i>{{date}}
+                                    </span>
+                                    {{#foreach authors}}
+                                    <span class="publish-author">
+                                        <i class="fa fa-user fa-fw"></i>
+                                        {{name}}
+                                    </span>
+                                    {{/foreach}}
+                                </div>
+                            </div>
+
+                            {{#if tags}}
+                            <div class="card-action article-tags">
+                                {{#foreach tags}}
+                                <a href="{{url}}" target="_blank">
+                                    <span class="chip tag-bg-color">{{name}}</span>
+                                </a>
+                                {{/foreach}}
+                            </div>
+                            {{/if}}
+                        </a>
+                    </div>
+                </div>
+                {{/foreach}}
+            </div>
+        </article>
 
     </main>

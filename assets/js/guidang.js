@@ -124,7 +124,7 @@ $.get(ghost.url.api('posts', {limit: 'all'})).done(function (data){
         }
         if(postItemIndex > 0 && lastMonth != publishMonth){
             var pieTmp = {
-                name: lastMonth + '月份',
+                name: publishYear + '年' + lastMonth + '月',
                 value: postCount
             }
             pirArr.push(pieTmp);
@@ -144,36 +144,20 @@ $.get(ghost.url.api('posts', {limit: 'all'})).done(function (data){
         postCount++;
         if(postItemIndex == data.posts.length - 1){
             var pieTmp = {
-                name: lastMonth + '月份',
+                name: publishYear + '年' + lastMonth + '月',
                 value: postCount
-            }
+            };
             pirArr.push(pieTmp);
         }
         lastMonth = publishMonth;
-        // 每个文章
-        lineItem = '<div class="line-item">\
-            <div class="item-left"></div>\
-            <div class="item-center" style="border: 1px solid' +bgColor+ ';border-top:none">\
-                <h3 title="' +publishYear+ '年' +publishMonth+ '月" style="color:' +bgColor+ '">' +publishDate+ '日</h3>\
-            </div>\
-            <div class="item-right">\
-                <div class="san-jiao-xing" style="border-left:5px solid ' +bgColor+ '"></div>\
-                <div class="line" style="background: ' +bgColor+ '"></div>\
-                <div class="postcount" style="border: 1px solid ' +bgColor+ ';color:' +bgColor+ '">'+ postCount +'</div>\
-                <div class="zuo-san-jiao-xing" style="border-right:7px solid ' +bgColor+ '"></div>\
-                <a href="' +blogUrl+postItem.url+ '" title="' +postItem.title+ '" class="title-content" style="border: 1px solid ' +bgColor+ '">\
-                    <h3>' +postItem.title+ '</h3>\
-                </a>\
-            </div>\
-        </div>'
-
         $('.month-item:last').append(lineItem)
     }
 
     var lineChart = echarts.init(document.getElementById('line'));
     var option = {
         title: {
-            text: '本年每月发文统计',
+            text: '文章统计',
+            show:false,
             subtext: '',
             left: 'center',
             top: '20px'
@@ -191,6 +175,7 @@ $.get(ghost.url.api('posts', {limit: 'all'})).done(function (data){
             center: ['50%', '55%'],
             color:colorArr,
             label:{
+                show:false,
                 color: '#212121',
                 borderRadius: 3,
                 borderWidth: 1,
