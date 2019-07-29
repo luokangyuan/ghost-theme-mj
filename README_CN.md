@@ -73,3 +73,7 @@ git clone git@github.com:luokangyuan/ghost-theme-mj.git
 ## 2.3.说明
 
 `其他的功能的正在开发，由于工作加班时间多，但是每天晚上都坚持完善半个小时的主题，`如果，你觉得不错，欢迎给一个start支持一下，项目地址[ghost-theme-mj](https://github.com/luokangyuan/ghost-theme-mj),如果你支持了，留下你的名字，我会写到赞助墙，不忘每一个在我人生中给我帮助和支持的人，感谢有你！！！
+
+## star趋势图
+
+[![Sparkline](https://stars.medv.io/luokangyuan/ghost-theme-mj.svg)](https://stars.medv.io/luokangyuan/ghost-theme-mj)
