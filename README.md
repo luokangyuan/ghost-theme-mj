@@ -53,6 +53,28 @@ This is a[Ghost](https://ghost.org) blog theme. Ghost blog is a very good writin
 
 **Method Two**： Use the git command to download in the theme directory, the recommended method one
 
+## configuration information
+
+Modify profile /var/www/ghost/content/settings$ vim routes.yaml
+
+```bash
+routes:
+  /about/me/: about-me
+  /articles/classification/: articles-classification
+  /articles/file/: articles-file
+  /recard/list/people/: recard-list-people
+  /friend/ship/: friend-ship
+collections:
+  /:
+    permalink: /{slug}/
+    template:
+      - index
+
+taxonomies:
+  tag: /articles/classification/{slug}/
+  author: /author/{slug}/
+```
+
 ```bash
 git clone git@github.com:luokangyuan/ghost-theme-mj.git
 ```
