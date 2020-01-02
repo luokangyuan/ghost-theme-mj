@@ -53,6 +53,28 @@
 
 **方法二：** 使用git命令下载在theme目录下，推荐使用方法一
 
+## 配置信息
+
+修改配置文件 /var/www/ghost/content/settings$ vim routes.yaml
+
+```bash
+routes:
+  /about/me/: about-me
+  /articles/classification/: articles-classification
+  /articles/file/: articles-file
+  /recard/list/people/: recard-list-people
+  /friend/ship/: friend-ship
+collections:
+  /:
+    permalink: /{slug}/
+    template:
+      - index
+
+taxonomies:
+  tag: /articles/classification/{slug}/
+  author: /author/{slug}/
+```
+
 ```bash
 git clone git@github.com:luokangyuan/ghost-theme-mj.git
 ```
